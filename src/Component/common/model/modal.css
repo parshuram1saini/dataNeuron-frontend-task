@@ -1,0 +1,110 @@
+.modal-container {
+    max-width: 400px;
+    height: 350px;
+    margin: auto;
+    padding: 40px;
+    border: 1px solid #ccc;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+}
+
+.modal-wrapper {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.closeIcon {
+    position: absolute;
+    top: 0%;
+    right: 5%;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-field {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.input-field label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-field input,
+textarea {
+    width: 90%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.input-field textarea {
+    resize: none;
+}
+
+.submit-btn {
+    width: 50%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Media Queries for Tablet */
+@media screen and (max-width: 1024px) {
+    .container {
+        max-width: 80%;
+        /* Adjust max-width for tablet screens */
+    }
+
+    .submit-btn {
+        width: 50%;
+        /* Adjust button width for tablet screens */
+    }
+}
+
+/* Media Queries for Mobile */
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 10px;
+        /* Adjust padding for mobile screens */
+    }
+
+    .input-field input {
+        width: 90%;
+        /* Input field occupies full width on mobile */
+    }
+
+    .submit-btn {
+        width: 95%;
+        /* Button occupies full width on mobile */
+        margin-top: 20px;
+        /* Increase margin-top for better spacing */
+        text-align: center;
+    }
+}
+
+.required::after {
+    content: ' *';
+    color: red;
+}
